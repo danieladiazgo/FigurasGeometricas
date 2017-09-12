@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Figuras Geometricas</string>
+    <string name="lado">Lado</string>
+    <string name="radio">Radio</string>
+    <string name="lado1">Lado 1</string>
+    <string name="lado2">Lado 2</string>
+    <string name="lado3">Lado 3</string>
+    <string name="area">Area</string>
+    <string name="perimetro">Perimetro</string>
+</resources>

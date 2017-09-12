@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghostwhite"
+    android:orientation="vertical"
+    tools:context="com.danielad.figurasgeometricas.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="Seleccione el tipo de figura al que le desea calcular el perimetro, area o volumen:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cuadro"
+            android:id="@+id/rCuadro"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Círculo"
+            android:id="@+id/rCirculo"/>
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Triángulo"
+            android:id="@+id/rTriangulo"/>
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cubo"
+            android:id="@+id/rCubo"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Especifique las dimensiones según la figura seleccionada:"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="25dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lado"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"/>
+        <EditText
+            android:layout_width="255dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:hint="Lado del cuadrado/cubo en cm"
+            android:id="@+id/eLado"
+            android:enabled="false"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:layout_width="255dp"
+            android:layout_marginLeft="35dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:hint="Radio del círculo en cm"
+            android:inputType="numberDecimal"
+            android:id="@+id/eRadio"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lado1"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:layout_width="255dp"
+            android:layout_marginLeft="28dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:hint="Lado 1 del triángulo en cm"
+            android:id="@+id/eLado1"
+            android:inputType="numberDecimal"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lado2"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:layout_width="255dp"
+            android:layout_marginLeft="28dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:hint="Lado 2 del triángulo en cm"
+            android:inputType="numberDecimal"
+            android:id="@+id/eLado2"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lado3"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:layout_width="255dp"
+            android:layout_marginLeft="28dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:hint="Lado 3 del triángulo en cm"
+            android:id="@+id/eLado3"
+            android:inputType="numberDecimal"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:text="Calcular"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:id="@+id/bCalcular"
+            android:enabled="true"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:id="@+id/tResult"/>
+
+</LinearLayout>
